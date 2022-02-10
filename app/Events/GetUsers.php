@@ -6,8 +6,9 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
+use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-class GetUsers
+class GetUsers extends ShouldBeStored
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
